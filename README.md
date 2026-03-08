@@ -56,4 +56,4 @@ pip install -r requirements.txt
 pip install -r requirements.txt
 ```
 
->> catatan : repositori ini diambil dari https://github.com/Kurikulum-Sekolah-Pacmann/dataset-olist dan dimodifikasi sesuai kebutuhan.
+> catatan : repositori ini diambil dari https://github.com/Kurikulum-Sekolah-Pacmann/dataset-olist dan dimodifikasi sesuai kebutuhan.
