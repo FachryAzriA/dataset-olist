@@ -1,0 +1,60 @@
+2026-03-08 11:43:41,018 - INFO - ==================================STARTING EXTRACT DATA=======================================
+2026-03-08 11:43:41,337 - INFO - EXTRACT 'public.product_category_name_translation' - SUCCESS.
+2026-03-08 11:43:41,877 - INFO - EXTRACT 'public.products' - SUCCESS.
+2026-03-08 11:43:43,986 - INFO - EXTRACT 'public.orders' - SUCCESS.
+2026-03-08 11:43:47,445 - INFO - EXTRACT 'public.order_items' - SUCCESS.
+2026-03-08 11:43:49,294 - INFO - EXTRACT 'public.order_reviews' - SUCCESS.
+2026-03-08 11:43:49,294 - INFO - Extract All Tables From Sources - SUCCESS
+2026-03-08 11:43:49,313 - INFO - ==================================ENDING EXTRACT DATA=======================================
+2026-03-08 11:43:49,362 - INFO - [pid 18344] Worker Worker(salt=5074720275, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=18344) done      Extract()
+2026-03-08 11:43:49,364 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-08 11:43:49,372 - INFO - Informed scheduler that task   Extract__99914b932b   has status   DONE
+2026-03-08 11:43:49,373 - DEBUG - Asking scheduler for work...
+2026-03-08 11:43:49,379 - DEBUG - Pending tasks: 2
+2026-03-08 11:43:49,380 - INFO - [pid 18344] Worker Worker(salt=5074720275, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=18344) running   Load()
+2026-03-08 11:43:50,950 - INFO - Read Extracted Data - SUCCESS
+2026-03-08 11:43:50,951 - INFO - Connect to DWH - SUCCESS
+2026-03-08 11:43:51,359 - INFO - Truncate staging Schema in DWH - SUCCESS
+2026-03-08 11:43:51,359 - INFO - ==================================STARTING LOAD DATA=======================================
+2026-03-08 11:44:27,086 - INFO - LOAD All Tables To DWH - SUCCESS
+2026-03-08 11:44:27,090 - INFO - ==================================ENDING LOAD DATA=======================================
+2026-03-08 11:44:27,128 - INFO - [pid 18344] Worker Worker(salt=5074720275, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=18344) done      Load()
+2026-03-08 11:44:27,130 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-08 11:44:27,137 - INFO - Informed scheduler that task   Load__99914b932b   has status   DONE
+2026-03-08 11:44:27,137 - DEBUG - Asking scheduler for work...
+2026-03-08 11:44:27,144 - DEBUG - Pending tasks: 1
+2026-03-08 11:44:27,145 - INFO - [pid 18344] Worker Worker(salt=5074720275, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=18344) running   Transform()
+2026-03-08 11:44:27,148 - INFO - Connect to DWH - SUCCESS
+2026-03-08 11:44:27,158 - INFO - Read Transform Query - SUCCESS
+2026-03-08 11:44:27,158 - INFO - ==================================STARTING TRANSFROM DATA=======================================
+2026-03-08 11:44:28,791 - INFO - Transform to 'final.dim_product' - SUCCESS
+2026-03-08 11:44:28,849 - INFO - Transform to 'final.dim_order_status' - SUCCESS
+2026-03-08 11:44:28,899 - INFO - Transform to 'final.dim_reviews' - SUCCESS
+2026-03-08 11:44:28,915 - INFO - Transform to 'final.dim_word_values' - SUCCESS
+2026-03-08 11:44:31,308 - INFO - Transform to 'final.fct_item_ordered_per_day' - SUCCESS
+2026-03-08 11:44:33,361 - INFO - Transform to 'final.fct_item_ordered_per_month' - SUCCESS
+2026-03-08 11:44:33,881 - INFO - Transform to 'final.fct_order_status' - SUCCESS
+2026-03-08 11:44:34,833 - INFO - Transform to 'final.fct_review_rating' - SUCCESS
+2026-03-08 11:44:36,332 - INFO - Transform to 'final.fct_review_value' - SUCCESS
+2026-03-08 11:44:36,338 - INFO - Transform to All Dimensions and Fact Tables - SUCCESS
+2026-03-08 11:44:36,343 - INFO - ==================================ENDING TRANSFROM DATA=======================================
+2026-03-08 11:44:36,344 - INFO - [pid 18344] Worker Worker(salt=5074720275, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=18344) done      Transform()
+2026-03-08 11:44:36,346 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-08 11:44:36,357 - INFO - Informed scheduler that task   Transform__99914b932b   has status   DONE
+2026-03-08 11:44:36,359 - DEBUG - Asking scheduler for work...
+2026-03-08 11:44:36,370 - DEBUG - Done
+2026-03-08 11:44:36,372 - DEBUG - There are no more tasks to run at this time
+2026-03-08 11:44:36,373 - INFO - Worker Worker(salt=5074720275, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=18344) was stopped. Shutting down Keep-Alive thread
+2026-03-08 11:44:36,377 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 3 ran successfully:
+    - 1 Extract()
+    - 1 Load()
+    - 1 Transform()
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
